@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css -->
+    <link rel="stylesheet" href="css/dangnhap.css">
+
+    <!-- link faicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- logo -->
+    <link rel="shortcut icon" href="/header_img/logo/en.png">
+    <title>Đăng Nhập</title>
+</head>
+
+<body>
+    <main>
+        
+        <!-- form start -->
+        <form action="/_trangchu/trangchu.html" onsubmit="return frmConfirm() ">
+            <div>
+                <a href="/_trangchu/trangchu.html"><img src="img/logo/z4939147338368_4b161cee35211b7e9682d1aeed8e1b21.png" alt="logo"></a>
+                <p class="heading">Đăng Nhập</p>
+            </div>
+
+            <div class="form-group ">
+                <label for="email">Email</label>
+                <div class="input-icon">
+                    <div class="icon" ><i class="fa-solid fa-envelope"></i></div>
+                    <input class="form-control" type="text" id="email" placeholder="Vui lòng nhập email">
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group " >
+                <label for="pw">Mật khẩu</label>
+                <div class="input-icon">
+                    <div class="icon"><i class="fa-solid fa-lock"></i></div>
+                    <input class="form-control" type="password" id="pw" placeholder="Vui lòng nhập mật khẩu">
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="duytridangnhap">
+                <input type="checkbox" name="" id="tieptuc"><label for="tieptuc">Duy trì đăng nhập</label>
+            </div>
+            
+            <button class="form-submit">Đăng Nhập</button>
+            <p>Chưa có tài khoản? <a  href="/_dangky/dangky.html">Đăng ký</a></p>
+            <p><a href="#">Quên mật khẩu?</a></p>
+        </form>
+        <!-- form end -->
+
+    </main>
+    <script src="js/dangnhap.js"></script>
+    <script>
+        emailConfirm("email");
+        passConfirm('pw',8);
+    </script>
+</body>
+
+</html>
