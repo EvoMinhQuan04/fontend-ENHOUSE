@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css -->
+    <link rel="stylesheet" href="css/dangky.css">
+
+    <!-- link faicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- logo -->
+    <link rel="shortcut icon" href="/header_img/logo/en.png">
+    <title>Đăng Ký</title>
+</head>
+
+<body>
+    <main>
+        
+        <!-- form start -->
+        <form action="/_dangnhap/dangnhap.html" onsubmit="return frmConfirm()" >    
+            <div>
+                <a href="/_trangchu/trangchu.html"><img src="img/logo/yuqi.jpg" alt="logo"></a>
+                <p class="heading">Đăng Ký Thành Viên</p>
+            </div>
+
+            <div class="form-group ">
+                <label for="fullname">Tên đầy đủ</label>
+                <div class="input-icon">
+                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <input value="" class="form-control" type="text" id="fullname" placeholder="VD: Nguyễn Thanh Phong">
+
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group ">
+                <label for="sodienthoai">Số điện thoại</label>
+                <div class="input-icon">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <input class="form-control" type="text" id="sodienthoai" placeholder="VD: 0949123123">
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group ">
+                <label for="email">Email</label>
+                <div class="input-icon">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <input class="form-control" type="text" id="email" placeholder="VD: abcd@gmail.com">
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group ">
+                <label for="pw">Mật khẩu</label>
+                <div class="input-icon">
+                    <div class="icon"><i class="fa-solid fa-lock"></i></div>
+                    <input class="form-control" type="password" id="pw" placeholder="Mật khẩu tối thiểu 8 ký tự">
+
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group " >
+                <label for="rpw">Nhập lại mật khẩu</label>
+                <div class="input-icon">
+                    <div class="icon"><i class="fa-solid fa-lock"></i></div>
+                    <input class="form-control" type="password" id="rpw" placeholder="Vui lòng nhập lại mật khẩu">
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <button id="sub-btn" type="submit" class="form-submit">Đăng ký</button>
+            <p>Đã có tài khoản? <a  href="/_dangnhap/dangnhap.html">Đăng nhập</a></p>
+        </form>
+        <!-- form end -->
+        
+    </main>
+
+    <script src="js/dangky.js"></script>
+    <script>
+        nameConfirm("fullname");
+        emailConfirm("email");
+        phoneConfirm("sodienthoai");
+        passConfirm('pw',8);
+        rpassConfirm('rpw');
+    </script>
+</body>
+
+</html>
