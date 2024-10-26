@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link iconbox -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link css -->
+    <link rel="shortcut icon" href="/header_img/logo/en.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="thunghiem_1.css">
+    <title>SẢN PHẨM </title>
+</head>
+
+<body>
+    <!----------------------- Header  ----------------------------->
+    <header>
+        <div class="search-container">
+
+            <!----------------------- Sidebar ----------------------------->
+            <div class="sidebar">
+                <i id="menu_active"></i>
+                <div class="menusidebar" id="menusidebar">
+                    <div class="info">
+                        <img src="" alt=""> <!-- Không thêm hình ở đây -->
+                    </div>
+                    <ul class="nav-menu">
+                        <a href="/_trangchu/trangchu.html">
+                            <li>
+                                <i class='bx bxs-home'></i>
+                                <span>Trang chủ</span>
+                            </li>
+                        </a>
+
+                        <a href="/_muaban/muaban1.html">
+                            <li>
+                                <i class='bx bxs-dollar-circle'></i>
+                                <span>Mua bán</span>
+                            </li>
+                        </a>
+
+                        <a href="/_chothue/chothue1.html">
+                            <li>
+                                <i class='bx bxs-key'></i>
+                                <span>Cho thuê</span>
+                            </li>
+                        </a>
+
+
+                        <a href="https://phongtro123.com/">
+                            <li>
+                                <i class='bx bxs-news'></i>
+                                <span>Tin tức</span>
+                            </li>
+                        </a>
+
+                        <a href="/_lienhe/lienhe.html">
+                            <li>
+                                <i class='bx bx-support'></i>
+                                <span>Hỗ trợ</span>
+                            </li>
+                        </a>
+
+                        <a href="/_dangky/dangky.html">
+                            <li class="end">
+                                <i class='bx bxs-log-out'></i>
+                                <span>Đăng xuất</span>
+                            </li>
+                        </a>
+                </div>
+            </div>
+                <!----------------------- Sidebar End ----------------------------->
+
+
+                <!------- Logo ------->
+                <div class="logo">
+                    <a href="/_trangchu/trangchu.html"><img
+                            src="/header_img/logo/en.png" alt=""
+                            id="logo"> <img id="house" src="/header_img/logo/house.png" alt=""></a>
+                </div>
+
+            <!------- Search ------->
+            <div class="inputSearch">
+                <form method="get" action="/_timkiem/timkiem.html" id="frmSearch" onsubmit="return frmValidate()">
+                    <input name="input" type="text" placeholder="Tìm kiếm" id="TimKiem">
+                    <button title="Tìm kiếm" id="TimKiembtn" type="submit"><i class='bx bx-search-alt'></i></button>
+                </form>
+
+                <div class="convenient">
+                    <i class='bx bxs-bell'></i>
+                    <i class='bx bxs-chat'></i>
+                </div>
+
+            </div>
+
+            <!------- User ------->
+            <div class="user">
+                <div onclick="getLink('/_yeuthich/yeuthich.html')">
+                  <a href="/_yeuthich/yeuthich.html"> <i class='bx bxs-heart'></i>Yêu thích</a>  
+                </div>
+
+                <div>
+                    <a href="/_dangnhap/dangnhap.html"> <i class='bx bxs-user'></i>Tài khoản</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="GoiY">
+            <div class="BoLoc">
+                <!------- Vị trí end ------->
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class='bx bxs-edit-location'></i> Vị trí
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item active" href="#">Tất cả</a></li>
+                        <li><a class="dropdown-item" href="#">Hồ Chí Minh</a></li>
+                        <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                        <li><a class="dropdown-item" href="#">Đà Nẵng</a></li>
+                        <li><a class="dropdown-item" href="#">Cần Thơ</a></li>
+                        <li><a class="dropdown-item" href="#">Bạc Liêu</a></li>
+                        <li><a class="dropdown-item" href="#">Cà Mau</a></li>
+                        <li><a class="dropdown-item" href="#">Bình Dương</a></li>
+                        <li><a class="dropdown-item" href="#">Bến Tre</a></li>
+                        <li><a class="dropdown-item" href="#">Hậu Giang</a></li>
+                        <li><a class="dropdown-item" href="#">Sóc Trăng</a></li>
+                        <li><a class="dropdown-item" href="#">Vĩnh Long</a></li>
+                        <li><a class="dropdown-item" href="#">Kiên Giang</a></li>
+                        <li><a class="dropdown-item" href="#">An Giang</a></li>
+                        <li><a class="dropdown-item" href="#">Trà Vinh</a></li>
+                        <li><a class="dropdown-item" href="#">Đồng Tháp</a></li>
+                    </ul>
+                </div>
+                <!------- Vị trí end ------->
+
+                <!------- Phòng trọ end ------->
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class='bx bxs-home-alt-2'></i> Phòng trọ
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Nhà</a></li>
+                        <li><a class="dropdown-item" href="#">Căn hộ</a></li>
+                        <li><a class="dropdown-item active" href="#">Phòng trọ</a></li>
+                        <li><a class="dropdown-item" href="#">Văn phòng</a></li>
+                        <li><a class="dropdown-item" href="#">Mặt bằng</a></li>
+                        <li><a class="dropdown-item" href="#">Chung cư</a></li>
+                        <li><a class="dropdown-item" href="#">Mặt bằng kinh doanh</a></li>
+                        <li><a class="dropdown-item" href="#">Đất</a></li>
+                    </ul>
+                </div>
+                <!------- Phòng trọ end ------->
+
+                <!------- Giá tiền ------->
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class='bx bxs-dollar-circle'></i> Giá thuê
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item active" href="#">Tất cả</a></li>
+                        <li><a class="dropdown-item" href="#">1 triệu</a></li>
+                        <li><a class="dropdown-item" href="#">3 triệu</a></li>
+                        <li><a class="dropdown-item" href="#">5 triệu</a></li>
+                        <li><a class="dropdown-item" href="#">7 triệu</a></li>
+                        <li><a class="dropdown-item" href="#">9 triệu</a></li>
+                        <li><a class="dropdown-item" href="#">10 triệu</a></li>
+                        <li><a class="dropdown-item" href="#">12 triệu</a></li>
+                        <li><a class="dropdown-item" href="#">14 triệu</a></li>
+                    </ul>
+                </div>
+                <!------- Giá tiền end ------->
+
+                <div class="LocThem">
+                    <button type="button"><i class='bx bx-filter'></i> Lọc thêm <i class='bx bx-caret-down'></i>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!----------------------- Header end ----------------------------->
+
+
+    <main>
+        <div class="daunao">
+            <div class="boss">
+                <div style="max-width: 65rem;" class="card-wrap">
+                    <div class="card">
+                        <!--head-card-->
+                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                            </div>
+
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="pic/sp2_2/snapedit_1701511387259.jpg" alt="" class="d-block">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pic/sp2_2/snapedit_1701511405615.jpg" alt="" class="d-block">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pic/sp2_2/snapedit_1701511426499.jpg" alt="" class="d-block">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pic/sp2_2/snapedit_1701511440439.jpg  " alt="" class="d-block">
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#demo"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#demo"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-items">
+                        <!--card-bottom-->
+                        <div class="product-content">
+                            <h3 class="product-title"> Phòng Cho Thuê Gác Cao, Sẵn Nội Thất Cơ Bản Ngay Lê Văn Qưới- Hoà
+                                Bình</h3>
+                            <a href="#" class="product-link"></a>
+                            <div class="product-price">
+                                <p style="color: #0499a8; font-size: 2.4rem" class="price">2 triệu 700
+                                    nghìn<span></span></p> <br>
+                            </div>
+                            <div class="product-detail">
+                                <div class="thongtincanho" style="margin-bottom: 4rem;">
+                                    <p style="font-size: 2rem;color: black;"><b>Thông Tin Căn Hộ</b></p>
+                                    <p style="font-size: 1.6rem;">Hồ Văn Long, Phường Bình Hưng Hòa B, Quận Bình Tân,
+                                        TPHCM
+                                    </p>
+                                </div>
+                                <p style="font-size: 2rem;color: black;"><b>Thông Tin Chính</b></p>
+                                <div style="margin-bottom: 5rem;">
+                                    <table>
+                                        <tr>
+                                            <th>Diện tích chung:</th>
+                                            <td>28 m <sup>2</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nhà tắm/phòng ngủ:</th>
+                                            <td>1/1</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Ngày đăng:</th>
+                                            <td>04/12/2023</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <p style="font-size: 2rem;color: black;"><b>Giới thiệu </b></p>
+                                <p style="font-size: 1.6rem;"> 🔥Phòng Cho Thuê Gác Cao Sẵn Máy Lạnh, Tủ Gỗ Quần Áo, Tủ
+                                    Kệ Bếp Giá Rẻ Ngay Lê Văn Qưới - Ngã Tư Bốn Xã🔥 <br>
+                                    <br>
+                                    💵Giá chỉ từ 2tr7, 2tr8, 3tr, 3tr3 <br>
+                                    <br>
+                                    👉Phòng mới xây, Thiết kế sang trọng. <br>
+                                    👉Giờ giấc tự do, Camera an ninh. <br>
+                                    👉Hầm gửi xe rộng rãi, Cửa vân tay. <br>
+                                    👉Trang bị máy giặt chung+ sân phơi. <br>
+                                    <br>
+                                    ☎️Quan Tâm Sản Phẩm Liên Hệ: 0938274902 (Hán Quân Megas) để được tư vấn và hỗ trợ
+                                    xem phòng Free. <br>
+                                    ❤️Xin cảm ơn❤️
+                                </p>
+                            </div>
+                        </div>
+                        <div class="purcha-info" style="margin-left: 5.5rem;">
+                            <button style="font-size: 1.5rem;" type="button" class="btn">Báo cáo vi phạm &emsp;<i
+                                    class="fa-solid fa-circle-radiation"></i></button>
+                            <!--addcart-->
+                            <div class="socialproduct-link">
+                                <p style="font-size: 2rem;">Share at: &emsp;</p>
+                                <a href="#">
+                                    <i style="font-size: 2rem;" class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i style="font-size: 2rem;" class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i style="font-size: 2rem;" class="fa-brands fa-x-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="card-right-profile">
+                        <div>
+                            <div class="infoUser-container">
+                                <img src="pic/ce3573fcfc0955570c18.jpg" alt="">
+                                <div class="info">
+                                    <p class="name">Trí Huy <i class='bx bx-check'></i></p>
+                                    <p class="time">Đã tham gia: 9 tháng 10 ngày</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="contact-container">
+                                <div class="contactInfo " onclick="show('sp2_2')"><i class='bx bxs-phone'></i>
+                                    0945945945</div>
+                                <div class="contactMess" onclick="show('sp2_2')"><i class='bx bx-support'></i>Liên hệ
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="save-info">
+                        <p onclick="save('sp2_2')"><i class="fa-regular fa-heart" id="sp2_2"></i> Yêu thích</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div style="margin-left: 2rem;" class="map">
+            <h2 style="margin-left: 0;">Tiện ích xung quanh</h2>
+            <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.351955757465!2d106.60525657491945!3d10.8608125576318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bb78c67a15f%3A0x7a7406567094001!2zTmjDoCB0cuG7jQ!5e0!3m2!1svi!2s!4v1701518988798!5m2!1svi!2s"
+                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="margin-left: 2rem;" class="Content-container">
+            <div class="DangBan">
+                <p class="XemTruoc_title">Đăng bán</p>
+                <div class="XemTruoc">
+                    <a href="sp2_1.html" class="sanpham" style="text-decoration: none;">
+                        <div>
+                            <img src="pic/sp2_1/snapedit_1701510969044.jpg" alt="">
+                            <p class="mota" style="color: black;">Phòng trọ Giá rẻ Máy lạnh Thang máy ngay Ngã Tư Gò Mây
+                                mới xây mới</p>
+                            <p class="size" style="color: black;">25 m<sup>2</sup> 1 PN 1 WC Có gác</p>
+                            <p class="giatien">2 triệu 790 nghìn</p>
+                        </div>
+                    </a>
+                    <a href="sp2_3.html" class="sanpham" style="text-decoration: none;">
+                        <div>
+                            <img src="pic/sp2_3/snapedit_1701511538762.jpg" alt="">
+                            <p class="mota" style="color: black;">PHÒNG máy lạnh ở ngay - Giá rẻ cho các bạn sinh viên
+                            </p>
+                            <p class="size" style="color: black;">25 m<sup>2</sup> 1 PN 1 WC Có gác</p>
+                            <p class="giatien">2 triệu 800 nghìn</p>
+                        </div>
+                    </a>
+                    <a href="sp2_4.html" class="sanpham" style="text-decoration: none;">
+                        <div>
+                            <img src="pic/sp2_4/snapedit_1701518699490.jpg" alt="">
+                            <p class="mota" style="color: black;">Phòng đẹp sạch sẽ,Tân Kì Tân Quý, tiện đi tân phú 5p
+                                và các khu lân cận</p>
+                            <p class="size" style="color: black;">25 m<sup>2</sup> 1 PN 1 WC Có gác</p>
+                            <p class="giatien">3 triệu</p>
+                        </div>
+                    </a>
+                    <a href="sp2_5.html" class="sanpham" style="text-decoration: none;">
+                        <div>
+                            <img src="pic/sp2_5/snapedit_1701518848637.jpg" alt="">
+                            <p class="mota" style="color: black;">Phòng mới tại Bình Tân - Full nội thất giá 3tr</p>
+                            <p class="size" style="color: black;">25 m<sup>2</sup> 1 PN 1 WC Có gác</p>
+                            <p class="giatien">3 triệu</p>
+                        </div>
+                    </a>
+                    <a href="sp2_6.html" class="sanpham" style="text-decoration: none;">
+                        <div>
+                            <img src="pic/sp2_6/snapedit_1701519058681.jpg" alt="">
+                            <p class="mota" style="color: black;">Phòng Mới Giá Rẻ Có Thang Máy - Ngay Vườn Lài - ĐH
+                                Nguyễn Tất Thành</p>
+                            <p class="size" style="color: black;">30 m<sup>2</sup> 1 PN 1 WC Có gác</p>
+                            <p class="giatien">2 triệu 700 nghìn</p>
+                        </div>
+                    </a>
+                </div>
+                <a href="/_chothue/chothue1.html" class="LienKet" style="text-decoration: none;">
+                    <p>Xem Thêm</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="popup">
+            <div class="overlay"></div>
+            <div class="window">
+                <div class="left">
+                    <div class="title">THÔNG TIN SẢN PHẨM
+                        <hr>
+                    </div>
+                    <div class="main-content">
+                        <img id="review-img">
+                        <h3 id="review-name">Phòng trọ Giá rẻ Máy lạnh Thang máy ngay Ngã Tư Gò Mây mới xây mới</h3>
+                        <h3 id="review-address">Hồ Văn Long, Phường Bình Hưng Hòa B, Quận Bình Tân, TPHCM</h3>
+                        <div id="review-price">2 triệu 790 nghìn</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="close" onclick="hide()"><i class="fa-solid fa-xmark"></i></div>
+                    <div class="title">THÔNG TIN LIÊN HỆ
+                        <hr>
+                    </div>
+                    <div class="main-content">
+                        <div class="lienhe">
+                            <div class="form-group ">
+                                <label for="fullname">Họ và tên</label>
+                                <div class="input-icon">
+                                    <input class="form-control" type="text" id="name"
+                                        placeholder="Vui lòng nhập họ và tên"
+                                        onclick="errorname('off','Vui lòng nhập họ và tên')">
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="sdt">Số điện thoại</label>
+                                <div class="input-icon">
+                                    <input class="form-control" type="text" id="sdt"
+                                        placeholder="Vui lòng nhập số điện thoại"
+                                        onclick="errorsdt('off','Vui lòng nhập số điện thoại')">
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="email">Email</label>
+                                <div class="input-icon">
+                                    <input class="form-control" type="text" id="email" placeholder="Vui lòng nhập email"
+                                        onclick="erroremail('off','Vui lòng nhập email')">
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="noidung">Nội dung liên hệ</label>
+                                <div class="input-icon">
+                                    <textarea class="form-control" id="noidung" cols="50" rows="4"
+                                        placeholder="Không quá 200 ký tự !"
+                                        onclick="errornoidung('off','Không quá 200 ký tự')"></textarea>
+                                </div>
+                            </div>
+
+                            <button class="form-gui" onclick="submit()">Gửi</button>
+                        </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-head">
+                <a href="#logo">
+                    <div class="card-title">
+                        <h3>ÉN'S HOUSE</h3>
+                    </div>
+                </a>
+
+                <div class="footer-logo">
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-twitter'></i>
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-github'></i>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer-main">
+                <div class="card-title">
+                    <h2>NHÀ TRỌ GIÁ RẺ</h2>
+                    <h3>Chất lượng hàng đầu Việt Nam</h3>
+                    <img src="/header_img/logo/group3.png" alt="">
+                </div>
+                <div class="thongtinll">
+                    <h2>Địa chỉ liên hệ</h2>
+                    <p><i class='bx bxs-home-alt-2'></i> ĐHCT, P.Xuân Khánh<br> TP.Cần Thơ</p>
+                    <p><i class='bx bxl-gmail'></i> group3@gmail.com</p>
+                    <p><i class='bx bxs-phone'></i> Hotline: 0945945945</p>
+                </div>
+                <div class="chungnhan">
+                    <h2>Chứng nhận</h2>
+                    <img src="/header_img/footer/cerfiticate.png" alt="">
+                    <p>Giấy phép số: 429/GP-BTTTT do Bộ <br> TTTT cấp ngày 11/10/2019</p>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-end">
+                <h4>&copy 2023 Copyright: <a href="">Group3.com</a></h4>
+            </div>
+        </div>
+        <a href="#">
+            <div class="ToTop" id="totop">
+                <i class='bx bxs-to-top'></i>
+            </div>
+        </a>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('.save-content').click(function () {
+                $('.save-content').toggleClass("heart-active")
+                $('.text').toggleClass("heart-active")
+                $('.heart').toggleClass("heart-active")
+            });
+        });
+    </script>
+    <script src="js/sp.js"></script>
+    <script src="/_database/database.js"></script>
+</body>
+
+</html>
